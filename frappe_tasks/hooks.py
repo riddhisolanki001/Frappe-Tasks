@@ -110,6 +110,7 @@ app_license = "MIT"
 #	}
 # }
 
+
 # Scheduled Tasks
 # ---------------
 
@@ -199,3 +200,32 @@ app_license = "MIT"
 # auth_hooks = [
 #	"frappe_tasks.auth.validate"
 # ]
+fixtures=[
+    
+   
+    
+    
+    {"dt":"Report","filters":[
+        [
+            "module","in",[
+               "Frappe Tasks"
+            ]
+        ]
+    ]},
+    {"dt":"Client Script","filters":[
+        [
+            "module","in",[
+               "Frappe Tasks"
+            ]
+        ]
+    ]},
+
+    {"dt":"Custom Field","filters":[
+        [
+            "module","in",[
+               "Frappe Tasks"
+            ]
+        ]
+    ]},
+    
+]

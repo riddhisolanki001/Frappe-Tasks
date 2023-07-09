@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Sales Invoice",
+  "enabled": 1,
+  "modified": "2023-07-09 20:38:04.256150",
+  "module": "Frappe Tasks",
+  "name": "Uom Filter",
+  "script": "frappe.ui.form.on('Sales Invoice Item', {\n\titem_code: function(frm) {\n\t    $.each(frm.doc.items,function(i,d){\n\t        \t    item_code = d.item_code\n        console.log(item_code)\n            \n        frm.set_query(\"uom\",\"items\",function(doc,cdt,cdn){\n            let row = locals[cdt][cdn];\n            console.log(row)\n            return{\n                query:\n                \"frappe_tasks.www.item_uom.get_item_uoms\",\n                filters :{\n                    value :row.item_code,\n                    apply_on:'Item Code',\n                }\n            }\n        })\n\t    \n        \n\t        \n\t    })\n\t   \n\t}\n\n})\n",
+  "view": "Form"
+ }
+]
