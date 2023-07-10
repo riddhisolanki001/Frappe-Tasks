@@ -1,7 +1,5 @@
 # Copyright (c) 2013, Frappe Technologies Pvt. Ltd. and contributors
 # For license information, please see license.txt
-
-
 import frappe
 from frappe import _, scrub
 from frappe.utils import add_days, add_to_date, flt, getdate
