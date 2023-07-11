@@ -1,8 +1,8 @@
-// Copyright (c) 2016, Frappe Technologies Pvt. Ltd. and contributors
+// Copyright (c) 2023, riddhi and contributors
 // For license information, please see license.txt
 /* eslint-disable */
 
-frappe.query_reports["Sales Analytics"] = {
+frappe.query_reports["Sales Analytics Custom"] = {
 	"filters": [
 		{
 			fieldname: "tree_type",
